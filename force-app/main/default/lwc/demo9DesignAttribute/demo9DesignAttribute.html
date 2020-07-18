@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Demo 9 - Design Attributes in LWC" icon-name="action:script">
+        <p>Hello {fullName},</p>
+        <p>Hello {sessionTitle}</p>
+        <template if:true={displayImage}>
+            <img src={imgUrl} width="200" height="200"/>
+        </template>
+    </lightning-card>
+</template>

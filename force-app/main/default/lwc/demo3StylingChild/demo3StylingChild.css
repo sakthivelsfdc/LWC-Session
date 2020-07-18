@@ -1,0 +1,9 @@
+ul {
+    font-size: small;
+    color: white;
+    list-style-type: circle;
+}
+:host {
+    display: block;
+    background: blue;
+}

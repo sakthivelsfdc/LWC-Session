@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Demo 4 - Conditional Rendering" icon-name="action:script">
+        <lightning-layout title="Example 1">
+            <lightning-layout-item title="Example 1" size=10 class="slds-m-around_medium">
+                <lightning-input type="checkbox" 
+                    label="Show details" 
+                    onchange={handleChange}>
+                </lightning-input>
+                
+                <template if:true={displaySection}>
+                    <div class="slds-m-vertical_medium">
+                        Display your actions here..
+                    </div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>

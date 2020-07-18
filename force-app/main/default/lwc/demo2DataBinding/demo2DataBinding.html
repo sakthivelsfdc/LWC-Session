@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Demo 2 Data Binding & Decorators @track" icon-name="action:script">
+        <lightning-card title="Example 1" icon-name="utility:breadcrumbs">
+            <lightning-layout title="Example 1">
+                <lightning-layout-item title="Example 1" size=10 class="slds-m-around_medium">
+                    <p>Hello, {greeting}!</p>
+                    <lightning-input
+                        label="Name"
+                        value={greeting}
+                        onchange={handleNameChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        
+        <lightning-card title="Example 2" icon-name="utility:breadcrumbs">
+            <lightning-layout title="Example 2">
+                <lightning-layout-item size=10 class="slds-m-around_medium">
+                    <lightning-input name="firstName" label="First Name" onchange={handleFullNameChange}>
+                    </lightning-input>
+                    <lightning-input name="lastName" label="Last Name" onchange={handleFullNameChange}>
+                    </lightning-input>
+                    <p>Full Name: {fullName.firstName} {fullName.lastName}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+
+        <lightning-card title="Example 3" icon-name="utility:breadcrumbs">
+            <lightning-layout title="Example 3">
+                <lightning-layout-item size=10 class="slds-m-around_medium">
+                    <lightning-input name="firstName" label="First Name">
+                    </lightning-input>
+                    <lightning-input name="lastName" label="Last Name">
+                    </lightning-input>
+                    <lightning-button label="Click" variant="brand" onclick={handleButtonClick}></lightning-button>
+                    <p>Full Name: {fullName.firstName} {fullName.lastName}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+
+        <lightning-card title="Example 4" icon-name="utility:breadcrumbs">
+            <lightning-layout title="Example 4">
+                <lightning-layout-item size=10 class="slds-m-around_medium">
+                    <lightning-button variant="brand" label="Update Name" title="Update Name" onclick={changeFirstName} class="slds-m-left_x-small"></lightning-button>
+                    <p>Name is : {fullNameWithTrack.firstName}  {fullNameWithTrack.lastName}</p> 
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        
+    </lightning-card>
+</template>

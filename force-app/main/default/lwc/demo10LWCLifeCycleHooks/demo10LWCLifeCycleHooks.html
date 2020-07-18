@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Demo 10 - Lifecycle Hooks" icon-name="action:script">
+        <lightning-layout title="Example 1">
+            <lightning-layout-item size=10 class="slds-m-around_medium">
+                <lightning-button variant="brand" label="Parent" title="Parent button" onclick={handleOnClick}>
+                </lightning-button>
+                <p>Lifecycle Hooks Demo - {greetings}</p> 
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout title="Example 2">
+            <lightning-layout-item size=10 class="slds-m-around_medium">
+                <c-demo10-l-w-c-life-cycle-hooks-child></c-demo10-l-w-c-life-cycle-hooks-child>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+    <!--
+        https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_lifecycle_hooks
+    -->
+</template>

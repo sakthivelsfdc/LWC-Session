@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Demo 5 - for:each & iterator" icon-name="action:script">
+        <lightning-card title="Example 1 - for:each" icon-name="utility:breadcrumbs">
+            <lightning-layout title="Example 1">
+                <ul class="slds-m-around_medium">
+                    <template for:each={contacts} for:item="con">
+                        <li key={con.Id}>
+                            {con.Name}, {con.Title}
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout>
+        </lightning-card>
+
+        <lightning-card title="Example 2 - iterator" icon-name="utility:breadcrumbs">
+            <ul class="slds-m-around_medium">
+                <template iterator:con={contacts}>
+                    <li key={con.value.Id}>
+                        <div if:true={con.first} class="list-first"></div>
+                            {con.value.Name}, {con.value.Title}
+                        <div if:true={con.last} class="list-last"></div>
+                    </li>
+                </template>
+            </ul>
+        </lightning-card>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+h1 {
+    font-size: xx-large;
+    color : blue;
+}
+
+c-demo3-styling-child{
+    display: block;
+    border: 2px solid red;
+}
+
+:host{
+   border: 5px solid black;
+}

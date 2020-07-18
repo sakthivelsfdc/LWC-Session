@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Demo 7 - Static Resources" icon-name="action:script">
+        <lightning-card title="Static Resources" icon-name="utility:breadcrumbs">
+            <lightning-layout class="slds-m-around_medium">
+                <img src={lwcImageURL} alt="Salesforce LWC Development" />
+            </lightning-layout>
+        </lightning-card>
+
+        <lightning-card title="Apply Styles from Static Resources" icon-name="utility:breadcrumbs">
+            <h1>Hello Salesforce Developer</h1>
+            <p>Welcome to LWC Session</p>
+
+                <lightning-input value={textVal} onchange={changeHandler}> </lightning-input>
+                <h1 class="slds-text-heading_large slds-box slds-text-align_center">
+                    {textVal}
+                </h1>
+                <p class="applyStyle">{textVal}</p>
+            <lightning-layout  class="slds-m-around_medium">
+                <lightning-layout-item>
+                    <image src={winterLogo}/>
+                </lightning-layout-item> 
+                <lightning-layout-item>
+                    <img src={springLogo}/>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <image src={summerLogo} />
+                </lightning-layout-item>
+            </lightning-layout>
+
+        </lightning-card>
+    </lightning-card>
+</template>
