@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Demo 28 - Shared JS" icon-name="action:script">
+        <lightning-layout title="Shared JS">
+            <lightning-layout-item title="Shared JS" size=10 class="slds-m-around_medium">
+                <lightning-input label="Number 1" name="Number1" onchange={handleChange}></lightning-input>
+                <lightning-input label="Number 2" name="Number2" onchange={handleChange}></lightning-input>
+                <lightning-button label="Add" name="Add" onclick={handleAdd}></lightning-button>
+                <lightning-button label="Sub" name="Sub" onclick={handleSub}></lightning-button>
+                <lightning-button label="Mul" name="Mul" onclick={handleMul}></lightning-button>
+                <lightning-button label="Div" name="Div" onclick={handleDiv}></lightning-button>
+                <div>
+                    Addition: {addValue} <br>
+                    Subtraction: {subValue} <br>
+                    Multiplication: {mulValue} <br>
+                    Division: {divValue} <br>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Demo 11 - Private Reactive Property" icon-name="action:script">
+        <ul class="slds-m-around_medium">
+            <template iterator:it={contacts}>
+                <li key={it.value.Id}>
+                    <div if:true={it.first} class="list-first"></div>
+                    {it.value.Name}, {it.value.Title}
+                    <div if:true={it.last} class="list-last"></div>
+                </li>
+            </template>
+        </ul>
+        <lightning-button variant="brand" label="Update Name" title="Update Name" onclick={updateContact} class="slds-m-left_x-small"></lightning-button>
+                    
+    </lightning-card>
+</template>

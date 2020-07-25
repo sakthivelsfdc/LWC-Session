@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Demo 26 - Refresh Apex" icon-name="action:script">
+        <lightning-layout class="slds-m-around_medium">
+            <lightning-layout-item>
+                <template for:each={getAccountTypes.data} for:item="account">
+                    <div key={account.Id}>
+                        {account.Name} --- {account.Type}
+                    </div>
+                </template>
+                <lightning-button label="Update Account Type" onclick={handleClick}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

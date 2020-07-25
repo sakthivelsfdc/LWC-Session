@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Demo 14 - Getters and Setters to Modify Data" icon-name="action:script">
+        <lightning-input name="firstName" label="First Name" onchange={handleNameChange}></lightning-input>
+        <lightning-input name="lastName" label="Last Name" onchange={handleNameChange}></lightning-input>
+        <p>
+            Full Name with Upper Case: {upperCasename}
+        </p>
+    </lightning-card>
+    <!--https://developer.salesforce.com/docs/component-library/documentation/en/lwc/js_props_getters_setters-->
+</template>

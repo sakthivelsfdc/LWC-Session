@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Demo 20 - Custom Event Pub Sub" icon-name="action:script">
+        <lightning-layout class="slds-m-around_medium">
+            <lightning-layout-item>
+                <template for:each={contacts} for:item="contact">
+                    <div key={contact.Id}>
+                        <c-demo20-event-pub-sub-details contactdetails={contact}></c-demo20-event-pub-sub-details>
+                    </div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

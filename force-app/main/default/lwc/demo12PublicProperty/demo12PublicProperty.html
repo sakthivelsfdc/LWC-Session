@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Demo 12 - Public Property" icon-name="action:script">
+        <template for:each={contacts} for:item="contact">
+            <div key={contact.Id}>
+                <c-demo12-public-property-details contactdetails={contact}></c-demo12-public-property-details>
+            </div>
+        </template>
+    </lightning-card>
+</template>

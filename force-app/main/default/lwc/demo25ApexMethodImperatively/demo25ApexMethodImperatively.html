@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Demo 21 - Call an Apex Method Imperatively">
+        <lightning-combobox
+            name="progress"
+            label="Select Account"
+            value={value}
+            placeholder="Select Account"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+        <template if:true={allContacts}>
+            <template for:each={allContacts} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

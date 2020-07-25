@@ -1,0 +1,12 @@
+<template>
+
+    <lightning-card title="Demo 16 - Simple Event - Create and Dispatch Events" icon-name="action:script">
+        <lightning-layout title="Example 1">
+                <c-demo16-simple-event-child name="Salesforce" title="LWC with Sakthi" onsimpleevent={handleEventFromParent}></c-demo16-simple-event-child>
+        </lightning-layout>
+
+        <lightning-layout>
+            <lightning-button label="Call Child Method from Parent" onclick={handleParent}></lightning-button>
+        </lightning-layout>
+    </lightning-card>
+</template>

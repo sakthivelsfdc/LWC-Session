@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Demo 20 - Wire Apex Call">
+        <lightning-combobox
+            name="progress"
+            label="Select Account"
+            value={value}
+            placeholder="Select Account"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+        
+        <template if:true={allContacts.data}>
+            <template for:each={allContacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

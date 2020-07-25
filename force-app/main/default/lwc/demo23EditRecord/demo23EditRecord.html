@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Demo 23 - Edit a Record using record Form"  icon-name="action:script">
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            columns="2"
+            mode="edit"
+            layout-type="Compact">
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Demo 23 - Edit a Record using record Form with Specific Fields">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            fields={fields}></lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Demo 23 - Edit a Record using record Edit Form" icon-name="utility:breadcrumbs">
+        <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId}>
+            <lightning-messages></lightning-messages>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                    <lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                    <lightning-input-field field-name="Active__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-m-top_medium"> 
+                <lightning-button type="submit" variant="brand" label="Edit Contact"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

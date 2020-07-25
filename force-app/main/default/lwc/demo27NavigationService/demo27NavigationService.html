@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Demo 27 - Navigation Service" icon-name="action:script">
+        <lightning-card title="Navigate To Record" icon-name="utility:breadcrumbs">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <lightning-button label="New Account" onclick={navigateToNewAccountPage}></lightning-button>
+                    <lightning-button label="View Account" onclick={navigateToViewAccountPage}></lightning-button>
+                    <lightning-button label="Edit Account" onclick={navigateToEditAccountPage}></lightning-button>
+                    <lightning-button label="New Contact with Default" onclick={navigateToNewContactWithDefaults}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        <lightning-card title="Navigate To Views" icon-name="utility:breadcrumbs">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <lightning-button label="Account Recent list View" onclick={navigateToAccountListView}></lightning-button>
+                    <lightning-button label="Account Related List" onclick={navigateToContactRelatedList}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        <lightning-card title="Navigate To Home" icon-name="utility:breadcrumbs">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <lightning-button label="Navigate to Home" onclick={navigateToHomePage}></lightning-button>
+                    <lightning-button label="Navigate to Contact Home " class="slds-m-around_medium" onclick={navigateToContactHome}></lightning-button>
+                    <lightning-button label="Navigate to Reports" onclick={navigateToReports}></lightning-button>
+                    <lightning-button label="Navigate to Tab" onclick={navigateToTab}></lightning-button>
+                    <lightning-button label="Navigate to Chatter Home" onclick={navigateToChatter}></lightning-button>
+                    <lightning-button label="Navigate to Files " class="slds-m-around_medium" onclick={navigateToFilesHome}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout> 
+        </lightning-card>
+        <lightning-card title="Navigate To Component" icon-name="utility:breadcrumbs">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <lightning-button label="Navigate to Visualforce Page" onclick={navigateToVFPage}></lightning-button>
+                    <lightning-button label="Navigate to Lightning Component (AURA) " class="slds-m-around_medium" onclick={navigateToLightningComponent}></lightning-button>
+                    <lightning-button label="Navigate to LWC Demo Tab " class="slds-m-around_medium" onclick={navigateToLWCComponent}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+     </lightning-card>
+        <lightning-card title="Navigate To Other" icon-name="utility:breadcrumbs">
+            <lightning-button label="Navigate to Web Page" onclick={navigateToWebPage}></lightning-button>
+        </lightning-card>
+    </lightning-card>
+</template>

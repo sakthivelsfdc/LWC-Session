@@ -1,0 +1,59 @@
+<template>
+    <lightning-card title="Demo 22 - Load Record" icon-name="action:script">
+         <!--
+            layout-type = full/compact
+            mode = view/edit/readonly
+            fields={fields}
+        -->
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name="Account"
+            layout-type="Full"
+            mode="view"
+            columns=2
+            onsubmit={handleSubmit}>
+        </lightning-record-form>
+    </lightning-card>
+
+   <lightning-card title="Demo 22 - Load a Record using record view Form" icon-name="utility:breadcrumbs">
+        <lightning-record-view-form
+                    record-id={recordId}
+                    object-api-name="Account">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="Type"></lightning-output-field>
+                    <lightning-output-field field-name="NumberOfEmployees"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+
+    <lightning-card title="Demo 22 - Load a Record using getRecord" icon-name="utility:breadcrumbs">
+        <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectApiName}>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-formatted-text value={industryValue}
+                        class="slds-text-heading_large">
+                    </lightning-formatted-text>
+                    <lightning-formatted-number value={revenueValue}
+                        class="slds-text-heading_large">
+                    </lightning-formatted-number>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-formatted-text value={nameValue}
+                        class="slds-text-heading_large">
+                    </lightning-formatted-text>
+                    <lightning-formatted-text value={ratingValue}
+                        class="slds-text-heading_large">
+                    </lightning-formatted-text>
+                </div>
+            </div> 
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

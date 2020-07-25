@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Demo 17 - Custom Event Declarative" icon-name="action:script">
+        <lightning-layout class="slds-m-around_medium">
+            <lightning-layout-item>
+                <template for:each={contacts} for:item="contact">
+                    <div key={contact.Id}>
+                        <c-demo17-event-details contactdetails={contact} onselected={contactSelected}></c-demo17-event-details>
+                    </div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout class="slds-m-around_medium">
+            <lightning-layout-item class="slds-m-left_medium">
+                <template if:true={selectedContact}>
+                    <strong>Selected Contact</strong> <br>
+                    {selectedContact.Id} === {selectedContact.Name}
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>
