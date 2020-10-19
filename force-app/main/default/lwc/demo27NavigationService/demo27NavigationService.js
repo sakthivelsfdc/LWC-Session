@@ -163,8 +163,7 @@ export default class Demo27NavigationService extends NavigationMixin(LightningEl
         this[NavigationMixin.Navigate]({
             type: 'standard__component',
             attributes: {
-                //Here customLabelExampleAura is name of lightning aura component
-                //This aura component should implement lightning:isUrlAddressable
+                //This aura component should implement lightning:isUrlAddressable (implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable")
                 componentName: 'c__AuraComponentName'
             }
         });
